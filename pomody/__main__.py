@@ -1,6 +1,6 @@
 import sys
 from rich.console import Console
-from pomo import pomopy
+from pomody.pomody import pomody
 
 console = Console()
 
@@ -11,15 +11,15 @@ class main:
             console.print(self.help())
 
         elif "-nm" in sys.argv or "--no-messages" in sys.argv:
-            pomopy(False)
+            pomody(False)
 
         else:
-            pomopy()
+            pomody()
 
     def help(self):
         var = """
             Usage:
-                pomopy [PARAMETERS]
+                pomody [PARAMETERS]
             
             Parameters:
                 -h, --help: Show this help

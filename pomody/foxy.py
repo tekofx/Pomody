@@ -10,7 +10,7 @@ LONG_BREAK_TIME = 30 * 60
 console = Console()
 
 
-class pomopy:
+class pomody:
     def __init__(self) -> None:
 
         count = 0
