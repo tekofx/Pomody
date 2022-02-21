@@ -1,6 +1,6 @@
 from rich.progress import track
-from time import sleep
 from rich.console import Console
+from time import sleep
 import os
 
 WORK_TIME = 25 * 60
@@ -12,6 +12,7 @@ console = Console()
 
 class pomopy:
     def __init__(self) -> None:
+
         count = 0
         while True:
 

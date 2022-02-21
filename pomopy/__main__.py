@@ -7,9 +7,11 @@ console = Console()
 
 class main:
     def __init__(self) -> None:
-        print("a")
         if "-h" in sys.argv or "--help" in sys.argv:
             console.print(self.help())
+
+        elif "-nm" in sys.argv or "--no-messages" in sys.argv:
+            pomopy(False)
 
         else:
             pomopy()
