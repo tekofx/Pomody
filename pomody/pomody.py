@@ -1,4 +1,12 @@
-from rich.progress import track
+from typing import Text
+from rich.progress import (
+    track,
+    Progress,
+    BarColumn,
+    TimeRemainingColumn,
+    SpinnerColumn,
+    TextColumn,
+)
 from rich.console import Console
 from time import sleep
 import os
@@ -42,5 +50,17 @@ class pomody:
                 count = 0
 
     def progress_bar(self, time: int, description: str):
-        for _ in track(range(time), description=description):
-            sleep(1)
+        with Progress(
+            TextColumn(" "),
+            "[progress.description ]{task.description}",
+            SpinnerColumn(),
+            "[progress.percentage]{task.percentage:>3.0f}%",
+            BarColumn(bar_width=100),
+            TimeRemainingColumn(),
+            TextColumn(" "),
+            expand=True,
+        ) as progress:
+            task1 = progress.add_task(description=description, total=time)
+            while not progress.finished:
+                progress.update(task1, advance=1)
+                sleep(1)
