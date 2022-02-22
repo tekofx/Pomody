@@ -10,6 +10,7 @@ from rich.progress import (
 from rich.console import Console
 from time import sleep
 import os
+from pomody.console import Console
 
 WORK_TIME = 25 * 60
 SHORT_BREAK_TIME = 5 * 60
