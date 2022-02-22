@@ -11,9 +11,9 @@ from time import sleep
 import os
 from pomody.console import Console
 
-WORK_TIME = 25 * 60
-SHORT_BREAK_TIME = 5 * 60
-LONG_BREAK_TIME = 30 * 60
+WORK_TIME = 10
+SHORT_BREAK_TIME = 5
+LONG_BREAK_TIME = 5
 
 
 class pomody:
@@ -42,7 +42,9 @@ class pomody:
                     input()
             else:
                 console.print(
-                    "Congratulations! You have completed 4 pomodoros, press enter to start long break"
+                    "Congratulations! You have completed {} pomodoros, press enter to start long break".format(
+                        activities
+                    )
                 )
                 input()
                 self.progress_bar(LONG_BREAK_TIME, "Long Break!")
