@@ -7,20 +7,18 @@ from rich.progress import (
     SpinnerColumn,
     TextColumn,
 )
-from rich.console import Console
 from time import sleep
 import os
 from pomody.console import Console
 
-WORK_TIME = 25 * 60
+WORK_TIME = 10
 SHORT_BREAK_TIME = 5 * 60
 LONG_BREAK_TIME = 30 * 60
 
-console = Console()
-
 
 class pomody:
-    def __init__(self) -> None:
+    def __init__(self, notifications: bool = True) -> None:
+        console = Console(notifications)
 
         count = 0
         while True:

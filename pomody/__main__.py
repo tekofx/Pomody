@@ -10,7 +10,7 @@ class main:
         if "-h" in sys.argv or "--help" in sys.argv:
             console.print(self.help())
 
-        elif "-nm" in sys.argv or "--no-messages" in sys.argv:
+        elif "-n" in sys.argv or "--no-notifications" in sys.argv:
             pomody(False)
 
         else:
@@ -23,7 +23,7 @@ class main:
             
             Parameters:
                 -h, --help: Show this help
-                -nm --no-messages: Disable messages
+                -n --no-notifications: Disable notifications
                 """
         return var
 
