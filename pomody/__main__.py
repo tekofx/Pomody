@@ -9,12 +9,18 @@ class main:
     def __init__(self) -> None:
         if "-h" in sys.argv or "--help" in sys.argv:
             console.print(self.help())
+        activities = 3
+        notifications = True
 
-        elif "-n" in sys.argv or "--no-notifications" in sys.argv:
-            pomody(False)
+        if "-n" in sys.argv or "--no-notifications" in sys.argv:
+            notifications = False
 
-        else:
-            pomody()
+        if "-a" in sys.argv:
+            activities = int(sys.argv[sys.argv.index("-a") + 1])
+        if "--activities" in sys.argv:
+            activities = int(sys.argv[sys.argv.index("--activities") + 1])
+        print(activities)
+        pomody(notifications, activities)
 
     def help(self):
         var = """
@@ -23,7 +29,8 @@ class main:
             
             Parameters:
                 -h, --help: Show this help
-                -n --no-notifications: Disable notifications
+                -n, --no-notifications: Disable notifications
+                -a, --activities: Number of activities before a long break
                 """
         return var
 

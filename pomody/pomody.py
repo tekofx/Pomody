@@ -17,13 +17,13 @@ LONG_BREAK_TIME = 30 * 60
 
 
 class pomody:
-    def __init__(self, notifications: bool = True) -> None:
+    def __init__(self, notifications: bool = True, activities: int = 3) -> None:
         console = Console(notifications)
 
         count = 0
         while True:
 
-            if count != 3:
+            if count != activities:
                 os.system("clear")
                 self.progress_bar(WORK_TIME, "Working")
                 os.system("clear")
