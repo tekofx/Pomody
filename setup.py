@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
     name="pomody",  # How you named your package folder (MyLib)
     packages=["pomody"],  # Chose the same as "name"
-    version="0.5.1",  # Start with a small number and increase it with every change you make
+    version="0.5.2",  # Start with a small number and increase it with every change you make
     license="MIT",  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description="A pomodoro CLI app",  # Give a short description about your library
     long_description=long_description,
