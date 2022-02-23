@@ -11,9 +11,9 @@ from time import sleep
 import os
 from pomody.console import Console
 
-WORK_TIME = 10
-SHORT_BREAK_TIME = 5
-LONG_BREAK_TIME = 5
+WORK_TIME = 25 * 60
+SHORT_BREAK_TIME = 5 * 60
+LONG_BREAK_TIME = 30 * 60
 
 
 class pomody:
