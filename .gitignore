@@ -3,3 +3,4 @@ dist/*
 *.egg-info
 MANIFEST
 main.py
+*code-workspace
